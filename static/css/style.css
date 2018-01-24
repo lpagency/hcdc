@@ -27,6 +27,11 @@ li{
   z-index: 10000 !important;
 }
 
+.btn-store{
+    border: solid 1px #ccc;
+    color: #777;
+}
+
 
 .lateral{
     background: rgba(0, 0, 0, 0.26);
