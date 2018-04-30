@@ -28,10 +28,4 @@ $(document).ready(function()
 
         $('.product-related').ecommerce('product_box', config);
     };
-
-    //cambia imagenes pequeñas en detalle de producto 
-    $(document).on("click", '.little', function(){
-        $("#img_detail").attr("src", $(this).attr('src'));
-    });
-
 });
