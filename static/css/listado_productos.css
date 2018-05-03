@@ -13,6 +13,12 @@ div.image-upload.part1
     z-index:1000;
 }
 
+.lg-close
+{
+    position: relative;
+    top: 15px;
+}
+
 .lateral-detalle
 {
     position: relative;
