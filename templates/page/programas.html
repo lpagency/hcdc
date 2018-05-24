@@ -8,42 +8,35 @@
     {% include '../home/header.html' %}
 {% end %}
 
-
 {% block javascript %}
 {% end %}
 
-
 {% block body %}
-
     {% if is_admin %}
         {% set editabletext = 'editabletext' %}
     {% else %}
         {% set editabletext = '' %}
     {% end %}
 
-
-    <!-- *contenido* -->
     <body id="lapimport">
         <section>
-            <div class="mobile" style="background:url('{{ read_image(site.name + '_programas',500) }}'); height:300px; background-size:cover; margin-top: 0px;  filter: grayscale(0%) brightness(65%); -webkit-filter: grayscale(0%) brightness(65%); -moz-filter: grayscale(0%) brightness(65%); -ms-filter: grayscale(0%) brightness(65%);-o-filter: grayscale(0%) brightness(65%); background-position:center; margin-bottom: 40px;" data-img-width="1600" data-img-height="1064" data-diff="100">
+            <div class="mobile programs-banner" style="background:url('{{ read_image(site.name + '_programas',500) }}');" data-img-width="1600" data-img-height="1064" data-diff="100">
                 {% if is_admin %}
                     <div class="image-upload part1 lapiz visible-movil">
                         <label for="img_programas">
                             <img class="change-image" src="https://7static.loadingplay.com/static/images/ef03c01fe39c6b7d1404e311adfe47ff_btn-edit.png" onmouseover="this.src='https://7static.loadingplay.com/static/images/f2e626ad62e2c957b3708a27e55f4b03_btn-edit-hover.png';" onmouseout="this.src='https://7static.loadingplay.com/static/images/ef03c01fe39c6b7d1404e311adfe47ff_btn-edit.png'">
                         </label>
-                        <input type="file" class="editableimage" image-id="{{ site.name }}_programas" name="image" id="img_programas" >
+                        <input type="file" class="editableimage" image-id="{{ site.name }}_programas" name="image" id="img_programas">
                     </div>
                 {% end %}
                 <img id="{{ site.name }}_programas" src="{{ read_image(site.name + '_programas', 1) }}" onload="this.onload='';this.src='{{ read_image(site.name + '_programas',500) }}'" class="banner_uno_list hidden" alt="item">
             </div>
-
             <div class="container">
                 <div class="col-md-12">
-                    <div class="text-center titulo-prou {{editabletext}}" text-id="{{ site.name + '_programas' }}"> {{ read_text(site.name +  '_programas') }}</div>
+                    <div class="text-center titulo-prou {{editabletext}}" text-id="{{ site.name + '_programas' }}"> {{ read_text(site.name + '_programas') }}</div>
                 </div>
             </div>
         </section>
-
         <section>
             <div>
                 <div class="banner">
@@ -60,12 +53,10 @@
                             <a id="{{ site.name + '_box_programas_banner_1' }}" href="{{ read_link(site.name + '_box_programas_banner_1') }}">
                                 <img id="{{ site.name }}_box_programas_banner_1" src="{{ read_image(site.name + '_box_programas_banner_1', 1) }}" onload="this.onload='';this.src='{{ read_image(site.name + '_box_programas_banner_1',500) }}'" class="box-programas" alt="item">
                             </a>
-
                             {% if is_admin %}
                                 <img class="change-image editablelink" link-id="{{ site.name + '_box_programas_banner_1' }}" content="{{ read_link(site.name + '_box_programas_banner_1') }}" src="{{ site_base }}/{{ nocache_static }}/img/link.png" onmouseover="this.src='{{ site_base }}/{{ nocache_static }}/img/link.png';" onmouseout="this.src='{{ site_base }}/{{ nocache_static }}/img/link.png';">
                             {% end %}
-
-                            <div class="texto-hu {{editabletext}}" text-id="{{ site.name + '_programas_banners_1' }}"> {{ read_text(site.name +  '_programas_banners_1') }}</div>
+                            <div class="texto-hu {{editabletext}}" text-id="{{ site.name + '_programas_banners_1' }}"> {{ read_text(site.name + '_programas_banners_1') }}</div>
                         </div>
                     </div>
                     <div class="col-md-3 col-sm-6 col-xs-6 banners-linea">
@@ -81,12 +72,10 @@
                             <a id="{{ site.name + '_box_programas_banner_2' }}" href="{{ read_link(site.name + '_box_programas_banner_2') }}">
                                 <img id="{{ site.name }}_box_programas_banner_2" src="{{ read_image(site.name + '_box_programas_banner_2', 1) }}" onload="this.onload='';this.src='{{ read_image(site.name + '_box_programas_banner_2',500) }}'" class="box-programas" alt="item">
                             </a>
-
                             {% if is_admin %}
                                 <img class="change-image editablelink" link-id="{{ site.name + '_box_programas_banner_2' }}" content="{{ read_link(site.name + '_box_programas_banner_2') }}" src="{{ site_base }}/{{ nocache_static }}/img/link.png" onmouseover="this.src='{{ site_base }}/{{ nocache_static }}/img/link.png';" onmouseout="this.src='{{ site_base }}/{{ nocache_static }}/img/link.png';">
                             {% end %}
-
-                            <div class="texto-hu {{editabletext}}" text-id="{{ site.name + '_programas_banner_2' }}"> {{ read_text(site.name +  '_programas_banner_2') }}</div>
+                            <div class="texto-hu {{editabletext}}" text-id="{{ site.name + '_programas_banner_2' }}"> {{ read_text(site.name + '_programas_banner_2') }}</div>
                         </div>
                     </div>
                     <div class="col-md-3 col-sm-6 col-xs-6 banners-linea">
@@ -102,12 +91,10 @@
                             <a id="{{ site.name + '_box_programas_banner_3' }}" href="{{ read_link(site.name + '_box_programas_banner_3') }}">
                                 <img id="{{ site.name }}_box_programas_banner_3" src="{{ read_image(site.name + '_box_programas_banner_3', 1) }}" onload="this.onload='';this.src='{{ read_image(site.name + '_box_programas_banner_3',500) }}'" class="box-programas" alt="item">
                             </a>
-
                             {% if is_admin %}
                                 <img class="change-image editablelink" link-id="{{ site.name + '_box_programas_banner_3' }}" content="{{ read_link(site.name + '_box_programas_banner_3') }}" src="{{ site_base }}/{{ nocache_static }}/img/link.png" onmouseover="this.src='{{ site_base }}/{{ nocache_static }}/img/link.png';" onmouseout="this.src='{{ site_base }}/{{ nocache_static }}/img/link.png';">
                             {% end %}
-
-                            <div class="texto-hu {{editabletext}}" text-id="{{ site.name + '_programas_banner_3' }}"> {{ read_text(site.name +  '_programas_banner_3') }}</div>
+                            <div class="texto-hu {{editabletext}}" text-id="{{ site.name + '_programas_banner_3' }}"> {{ read_text(site.name + '_programas_banner_3') }}</div>
                         </div>
                     </div>
                     <div class="col-md-3 col-sm-6 col-xs-6 banners-linea">
@@ -123,17 +110,12 @@
                             <a id="{{ site.name + '_box_programas_banner_4' }}" href="{{ read_link(site.name + '_box_programas_banner_4') }}">
                                 <img id="{{ site.name }}_box_programas_banner_4" src="{{ read_image(site.name + '_box_programas_banner_4', 1) }}" onload="this.onload='';this.src='{{ read_image(site.name + '_box_programas_banner_4',500) }}'" class="box-programas" alt="item">
                             </a>
-
                             {% if is_admin %}
                                 <img class="change-image editablelink" link-id="{{ site.name + '_box_programas_banner_4' }}" content="{{ read_link(site.name + '_box_programas_banner_4') }}" src="{{ site_base }}/{{ nocache_static }}/img/link.png" onmouseover="this.src='{{ site_base }}/{{ nocache_static }}/img/link.png';" onmouseout="this.src='{{ site_base }}/{{ nocache_static }}/img/link.png';">
                             {% end %}
-
-                            <div class="texto-hu {{editabletext}}" text-id="{{ site.name + '_programas_banner_4' }}"> {{ read_text(site.name +  '_programas_banner_4') }}</div>
+                            <div class="texto-hu {{editabletext}}" text-id="{{ site.name + '_programas_banner_4' }}"> {{ read_text(site.name + '_programas_banner_4') }}</div>
                         </div>
                     </div>
-                </div>
-
-                <div class="banner">
                     <div class="col-md-3 col-sm-6 col-xs-6 banners-linea">
                         <div style="position: relative;">
                             {% if is_admin %}
@@ -146,13 +128,11 @@
                             {% end %}
                             <a id="{{ site.name + '_box_programas_banner_5' }}" href="{{ read_link(site.name + '_box_programas_banner_5') }}">
                                 <img id="{{ site.name }}_box_programas_banner_5" src="{{ read_image(site.name + '_box_programas_banner_5', 1) }}" onload="this.onload='';this.src='{{ read_image(site.name + '_box_programas_banner_5',500) }}'" class="box-programas" alt="item">
-                            </a>
-
+                                </a>
                             {% if is_admin %}
                                 <img class="change-image editablelink" link-id="{{ site.name + '_box_programas_banner_5' }}" content="{{ read_link(site.name + '_box_programas_banner_5') }}" src="{{ site_base }}/{{ nocache_static }}/img/link.png" onmouseover="this.src='{{ site_base }}/{{ nocache_static }}/img/link.png';" onmouseout="this.src='{{ site_base }}/{{ nocache_static }}/img/link.png';">
                             {% end %}
-
-                            <div class="texto-hu {{editabletext}}" text-id="{{ site.name + '_programas_banner_5' }}"> {{ read_text(site.name +  '_programas_banner_5') }}</div>
+                            <div class="texto-hu {{editabletext}}" text-id="{{ site.name + '_programas_banner_5' }}"> {{ read_text(site.name + '_programas_banner_5') }}</div>
                         </div>
                     </div>
                     <div class="col-md-3 col-sm-6 col-xs-6 banners-linea">
@@ -168,12 +148,10 @@
                             <a id="{{ site.name + '_box_programas_banner_6' }}" href="{{ read_link(site.name + '_box_programas_banner_6') }}">
                                 <img id="{{ site.name }}_box_programas_banner_6" src="{{ read_image(site.name + '_box_programas_banner_6', 1) }}" onload="this.onload='';this.src='{{ read_image(site.name + '_box_programas_banner_6',500) }}'" class="box-programas" alt="item">
                             </a>
-
                             {% if is_admin %}
                                 <img class="change-image editablelink" link-id="{{ site.name + '_box_programas_banner_6' }}" content="{{ read_link(site.name + '_box_programas_banner_6') }}" src="{{ site_base }}/{{ nocache_static }}/img/link.png" onmouseover="this.src='{{ site_base }}/{{ nocache_static }}/img/link.png';" onmouseout="this.src='{{ site_base }}/{{ nocache_static }}/img/link.png';">
                             {% end %}
-
-                            <div class="texto-hu {{editabletext}}" text-id="{{ site.name + '_programas_banner_6' }}"> {{ read_text(site.name +  '_programas_banner_6') }}</div>
+                            <div class="texto-hu {{editabletext}}" text-id="{{ site.name + '_programas_banner_6' }}"> {{ read_text(site.name + '_programas_banner_6') }}</div>
                         </div>
                     </div>
                     <div class="col-md-3 col-sm-6 col-xs-6 banners-linea">
@@ -189,12 +167,10 @@
                             <a id="{{ site.name + '_box_programas_banner_7' }}" href="{{ read_link(site.name + '_box_programas_banner_7') }}">
                                 <img id="{{ site.name }}_box_programas_banner_7" src="{{ read_image(site.name + '_box_programas_banner_7', 1) }}" onload="this.onload='';this.src='{{ read_image(site.name + '_box_programas_banner_7',500) }}'" class="box-programas" alt="item">
                             </a>
-
                             {% if is_admin %}
                                 <img class="change-image editablelink" link-id="{{ site.name + '_box_programas_banner_7' }}" content="{{ read_link(site.name + '_box_programas_banner_7') }}" src="{{ site_base }}/{{ nocache_static }}/img/link.png" onmouseover="this.src='{{ site_base }}/{{ nocache_static }}/img/link.png';" onmouseout="this.src='{{ site_base }}/{{ nocache_static }}/img/link.png';">
                             {% end %}
-
-                            <div class="texto-hu {{editabletext}}" text-id="{{ site.name + '_programas_banner_7' }}"> {{ read_text(site.name +  '_programas_banner_7') }}</div>
+                            <div class="texto-hu {{editabletext}}" text-id="{{ site.name + '_programas_banner_7' }}"> {{ read_text(site.name + '_programas_banner_7') }}</div>
                         </div>
                     </div>
                     <div class="col-md-3 col-sm-6 col-xs-6 banners-linea">
@@ -210,17 +186,12 @@
                             <a id="{{ site.name + '_box_programas_banner_8' }}" href="{{ read_link(site.name + '_box_programas_banner_8') }}">
                                 <img id="{{ site.name }}_box_programas_banner_8" src="{{ read_image(site.name + '_box_programas_banner_8', 1) }}" onload="this.onload='';this.src='{{ read_image(site.name + '_box_programas_banner_8',500) }}'" class="box-programas" alt="item">
                             </a>
-
                             {% if is_admin %}
                                 <img class="change-image editablelink" link-id="{{ site.name + '_box_programas_banner_8' }}" content="{{ read_link(site.name + '_box_programas_banner_8') }}" src="{{ site_base }}/{{ nocache_static }}/img/link.png" onmouseover="this.src='{{ site_base }}/{{ nocache_static }}/img/link.png';" onmouseout="this.src='{{ site_base }}/{{ nocache_static }}/img/link.png';">
                             {% end %}
-
-                            <div class="texto-hu {{editabletext}}" text-id="{{ site.name + '_programas_banner_8' }}"> {{ read_text(site.name +  '_programas_banner_8') }}</div>
+                            <div class="texto-hu {{editabletext}}" text-id="{{ site.name + '_programas_banner_8' }}"> {{ read_text(site.name + '_programas_banner_8') }}</div>
                         </div>
                     </div>
-                </div>
-
-                <div class="banner">
                     <div class="col-md-3 col-sm-6 col-xs-6 banners-linea">
                         <div style="position: relative;">
                             {% if is_admin %}
@@ -234,12 +205,10 @@
                             <a id="{{ site.name + '_box_programas_banner_9' }}" href="{{ read_link(site.name + '_box_programas_banner_9') }}">
                                 <img id="{{ site.name }}_box_programas_banner_9" src="{{ read_image(site.name + '_box_programas_banner_9', 1) }}" onload="this.onload='';this.src='{{ read_image(site.name + '_box_programas_banner_9',500) }}'" class="box-programas" alt="item">
                             </a>
-
                             {% if is_admin %}
                                 <img class="change-image editablelink" link-id="{{ site.name + '_box_programas_banner_9' }}" content="{{ read_link(site.name + '_box_programas_banner_9') }}" src="{{ site_base }}/{{ nocache_static }}/img/link.png" onmouseover="this.src='{{ site_base }}/{{ nocache_static }}/img/link.png';" onmouseout="this.src='{{ site_base }}/{{ nocache_static }}/img/link.png';">
                             {% end %}
-
-                            <div class="texto-hu {{editabletext}}" text-id="{{ site.name + '_programas_banner_9' }}"> {{ read_text(site.name +  '_programas_banner_9') }}</div>
+                            <div class="texto-hu {{editabletext}}" text-id="{{ site.name + '_programas_banner_9' }}"> {{ read_text(site.name + '_programas_banner_9') }}</div>
                         </div>
                     </div>
                     <div class="col-md-3 col-sm-6 col-xs-6 banners-linea">
@@ -255,12 +224,10 @@
                             <a id="{{ site.name + '_box_programas_banner_10' }}" href="{{ read_link(site.name + '_box_programas_banner_10') }}">
                                 <img id="{{ site.name }}_box_programas_banner_10" src="{{ read_image(site.name + '_box_programas_banner_10', 1) }}" onload="this.onload='';this.src='{{ read_image(site.name + '_box_programas_banner_10',500) }}'" class="box-programas" alt="item">
                             </a>
-
                             {% if is_admin %}
                                 <img class="change-image editablelink" link-id="{{ site.name + '_box_programas_banner_10' }}" content="{{ read_link(site.name + '_box_programas_banner_10') }}" src="{{ site_base }}/{{ nocache_static }}/img/link.png" onmouseover="this.src='{{ site_base }}/{{ nocache_static }}/img/link.png';" onmouseout="this.src='{{ site_base }}/{{ nocache_static }}/img/link.png';">
                             {% end %}
-
-                            <div class="texto-hu {{editabletext}}" text-id="{{ site.name + '_programas_banner_10' }}"> {{ read_text(site.name +  '_programas_banner_10') }}</div>
+                            <div class="texto-hu {{editabletext}}" text-id="{{ site.name + '_programas_banner_10' }}"> {{ read_text(site.name + '_programas_banner_10') }}</div>
                         </div>
                     </div>
                     <div class="col-md-3 col-sm-6 col-xs-6 banners-linea">
@@ -276,12 +243,10 @@
                             <a id="{{ site.name + '_box_programas_banner_11' }}" href="{{ read_link(site.name + '_box_programas_banner_11') }}">
                                 <img id="{{ site.name }}_box_programas_banner_11" src="{{ read_image(site.name + '_box_programas_banner_11', 1) }}" onload="this.onload='';this.src='{{ read_image(site.name + '_box_programas_banner_11',500) }}'" class="box-programas" alt="item">
                             </a>
-
                             {% if is_admin %}
                                 <img class="change-image editablelink" link-id="{{ site.name + '_box_programas_banner_11' }}" content="{{ read_link(site.name + '_box_programas_banner_11') }}" src="{{ site_base }}/{{ nocache_static }}/img/link.png" onmouseover="this.src='{{ site_base }}/{{ nocache_static }}/img/link.png';" onmouseout="this.src='{{ site_base }}/{{ nocache_static }}/img/link.png';">
                             {% end %}
-
-                            <div class="texto-hu {{editabletext}}" text-id="{{ site.name + '_programas_banner_11' }}"> {{ read_text(site.name +  '_programas_banner_11') }}</div>
+                            <div class="texto-hu {{editabletext}}" text-id="{{ site.name + '_programas_banner_11' }}"> {{ read_text(site.name + '_programas_banner_11') }}</div>
                         </div>
                     </div>
                     <div class="col-md-3 col-sm-6 col-xs-6 banners-linea">
@@ -297,12 +262,124 @@
                             <a id="{{ site.name + '_box_programas_banner_12' }}" href="{{ read_link(site.name + '_box_programas_banner_12') }}">
                                 <img id="{{ site.name }}_box_programas_banner_12" src="{{ read_image(site.name + '_box_programas_banner_12', 1) }}" onload="this.onload='';this.src='{{ read_image(site.name + '_box_programas_banner_12',500) }}'" class="box-programas" alt="item">
                             </a>
-
                             {% if is_admin %}
                                 <img class="change-image editablelink" link-id="{{ site.name + '_box_programas_banner_12' }}" content="{{ read_link(site.name + '_box_programas_banner_12') }}" src="{{ site_base }}/{{ nocache_static }}/img/link.png" onmouseover="this.src='{{ site_base }}/{{ nocache_static }}/img/link.png';" onmouseout="this.src='{{ site_base }}/{{ nocache_static }}/img/link.png';">
                             {% end %}
-
-                            <div class="texto-hu {{editabletext}}" text-id="{{ site.name + '_programas_banner_12' }}"> {{ read_text(site.name +  '_programas_banner_12') }}</div>
+                            <div class="texto-hu {{editabletext}}" text-id="{{ site.name + '_programas_banner_12' }}"> {{ read_text(site.name + '_programas_banner_12') }}</div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-6 banners-linea">
+                        <div style="position: relative;">
+                            {% if is_admin %}
+                                <div class="image-upload lapiz visible-movil">
+                                    <label for="img_box_programas_banner_13">
+                                        <img class="change-image" src="https://7static.loadingplay.com/static/images/ef03c01fe39c6b7d1404e311adfe47ff_btn-edit.png" onmouseover="this.src='https://7static.loadingplay.com/static/images/f2e626ad62e2c957b3708a27e55f4b03_btn-edit-hover.png';" onmouseout="this.src='https://7static.loadingplay.com/static/images/ef03c01fe39c6b7d1404e311adfe47ff_btn-edit.png'">
+                                    </label>
+                                    <input type="file" class="editableimage" image-id="{{ site.name }}_box_programas_banner_13" name="image" id="img_box_programas_banner_13">
+                                </div>
+                            {% end %}
+                            <a id="{{ site.name + '_box_programas_banner_13' }}" href="{{ read_link(site.name + '_box_programas_banner_13') }}">
+                                <img id="{{ site.name }}_box_programas_banner_13" src="{{ read_image(site.name + '_box_programas_banner_13', 1) }}" onload="this.onload='';this.src='{{ read_image(site.name + '_box_programas_banner_13',500) }}'" class="box-programas" alt="item">
+                            </a>
+                            {% if is_admin %}
+                                <img class="change-image editablelink" link-id="{{ site.name + '_box_programas_banner_13' }}" content="{{ read_link(site.name + '_box_programas_banner_13') }}" src="{{ site_base }}/{{ nocache_static }}/img/link.png" onmouseover="this.src='{{ site_base }}/{{ nocache_static }}/img/link.png';" onmouseout="this.src='{{ site_base }}/{{ nocache_static }}/img/link.png';">
+                            {% end %}
+                            <div class="texto-hu {{editabletext}}" text-id="{{ site.name + '_programas_banner_13' }}"> {{ read_text(site.name + '_programas_banner_13') }}</div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-6 banners-linea">
+                        <div style="position: relative;">
+                            {% if is_admin %}
+                                <div class="image-upload lapiz visible-movil">
+                                    <label for="img_box_programas_banner_14">
+                                        <img class="change-image" src="https://7static.loadingplay.com/static/images/ef03c01fe39c6b7d1404e311adfe47ff_btn-edit.png" onmouseover="this.src='https://7static.loadingplay.com/static/images/f2e626ad62e2c957b3708a27e55f4b03_btn-edit-hover.png';" onmouseout="this.src='https://7static.loadingplay.com/static/images/ef03c01fe39c6b7d1404e311adfe47ff_btn-edit.png'">
+                                    </label>
+                                    <input type="file" class="editableimage" image-id="{{ site.name }}_box_programas_banner_14" name="image" id="img_box_programas_banner_14">
+                                </div>
+                            {% end %}
+                            <a id="{{ site.name + '_box_programas_banner_14' }}" href="{{ read_link(site.name + '_box_programas_banner_14') }}">
+                                <img id="{{ site.name }}_box_programas_banner_14" src="{{ read_image(site.name + '_box_programas_banner_14', 1) }}" onload="this.onload='';this.src='{{ read_image(site.name + '_box_programas_banner_14',500) }}'" class="box-programas" alt="item">
+                            </a>
+                            {% if is_admin %}
+                                <img class="change-image editablelink" link-id="{{ site.name + '_box_programas_banner_14' }}" content="{{ read_link(site.name + '_box_programas_banner_14') }}" src="{{ site_base }}/{{ nocache_static }}/img/link.png" onmouseover="this.src='{{ site_base }}/{{ nocache_static }}/img/link.png';" onmouseout="this.src='{{ site_base }}/{{ nocache_static }}/img/link.png';">
+                            {% end %}
+                            <div class="texto-hu {{editabletext}}" text-id="{{ site.name + '_programas_banner_14' }}"> {{ read_text(site.name + '_programas_banner_14') }}</div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-6 banners-linea">
+                        <div style="position: relative;">
+                            {% if is_admin %}
+                                <div class="image-upload lapiz visible-movil">
+                                    <label for="img_box_programas_banner_15">
+                                        <img class="change-image" src="https://7static.loadingplay.com/static/images/ef03c01fe39c6b7d1404e311adfe47ff_btn-edit.png" onmouseover="this.src='https://7static.loadingplay.com/static/images/f2e626ad62e2c957b3708a27e55f4b03_btn-edit-hover.png';" onmouseout="this.src='https://7static.loadingplay.com/static/images/ef03c01fe39c6b7d1404e311adfe47ff_btn-edit.png'">
+                                    </label>
+                                    <input type="file" class="editableimage" image-id="{{ site.name }}_box_programas_banner_15" name="image" id="img_box_programas_banner_15">
+                                </div>
+                            {% end %}
+                            <a id="{{ site.name + '_box_programas_banner_15' }}" href="{{ read_link(site.name + '_box_programas_banner_15') }}">
+                                <img id="{{ site.name }}_box_programas_banner_15" src="{{ read_image(site.name + '_box_programas_banner_15', 1) }}" onload="this.onload='';this.src='{{ read_image(site.name + '_box_programas_banner_15',500) }}'" class="box-programas" alt="item">
+                            </a>
+                            {% if is_admin %}
+                                <img class="change-image editablelink" link-id="{{ site.name + '_box_programas_banner_15' }}" content="{{ read_link(site.name + '_box_programas_banner_15') }}" src="{{ site_base }}/{{ nocache_static }}/img/link.png" onmouseover="this.src='{{ site_base }}/{{ nocache_static }}/img/link.png';" onmouseout="this.src='{{ site_base }}/{{ nocache_static }}/img/link.png';">
+                            {% end %}
+                            <div class="texto-hu {{editabletext}}" text-id="{{ site.name + '_programas_banner_15' }}"> {{ read_text(site.name + '_programas_banner_15') }}</div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-6 banners-linea">
+                        <div style="position: relative;">
+                            {% if is_admin %}
+                                <div class="image-upload lapiz visible-movil">
+                                    <label for="img_box_programas_banner_16">
+                                        <img class="change-image" src="https://7static.loadingplay.com/static/images/ef03c01fe39c6b7d1404e311adfe47ff_btn-edit.png" onmouseover="this.src='https://7static.loadingplay.com/static/images/f2e626ad62e2c957b3708a27e55f4b03_btn-edit-hover.png';" onmouseout="this.src='https://7static.loadingplay.com/static/images/ef03c01fe39c6b7d1404e311adfe47ff_btn-edit.png'">
+                                    </label>
+                                    <input type="file" class="editableimage" image-id="{{ site.name }}_box_programas_banner_16" name="image" id="img_box_programas_banner_16">
+                                </div>
+                            {% end %}
+                            <a id="{{ site.name + '_box_programas_banner_16' }}" href="{{ read_link(site.name + '_box_programas_banner_16') }}">
+                                <img id="{{ site.name }}_box_programas_banner_16" src="{{ read_image(site.name + '_box_programas_banner_16', 1) }}" onload="this.onload='';this.src='{{ read_image(site.name + '_box_programas_banner_16',500) }}'" class="box-programas" alt="item">
+                            </a>
+                            {% if is_admin %}
+                                <img class="change-image editablelink" link-id="{{ site.name + '_box_programas_banner_16' }}" content="{{ read_link(site.name + '_box_programas_banner_16') }}" src="{{ site_base }}/{{ nocache_static }}/img/link.png" onmouseover="this.src='{{ site_base }}/{{ nocache_static }}/img/link.png';" onmouseout="this.src='{{ site_base }}/{{ nocache_static }}/img/link.png';">
+                            {% end %}
+                            <div class="texto-hu {{editabletext}}" text-id="{{ site.name + '_programas_banner_16' }}"> {{ read_text(site.name + '_programas_banner_16') }}</div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-6 banners-linea">
+                        <div style="position: relative;">
+                            {% if is_admin %}
+                                <div class="image-upload lapiz visible-movil">
+                                    <label for="img_box_programas_banner_17">
+                                        <img class="change-image" src="https://7static.loadingplay.com/static/images/ef03c01fe39c6b7d1404e311adfe47ff_btn-edit.png" onmouseover="this.src='https://7static.loadingplay.com/static/images/f2e626ad62e2c957b3708a27e55f4b03_btn-edit-hover.png';" onmouseout="this.src='https://7static.loadingplay.com/static/images/ef03c01fe39c6b7d1404e311adfe47ff_btn-edit.png'">
+                                    </label>
+                                    <input type="file" class="editableimage" image-id="{{ site.name }}_box_programas_banner_17" name="image" id="img_box_programas_banner_17">
+                                </div>
+                            {% end %}
+                            <a id="{{ site.name + '_box_programas_banner_17' }}" href="{{ read_link(site.name + '_box_programas_banner_17') }}">
+                                <img id="{{ site.name }}_box_programas_banner_17" src="{{ read_image(site.name + '_box_programas_banner_17', 1) }}" onload="this.onload='';this.src='{{ read_image(site.name + '_box_programas_banner_17',500) }}'" class="box-programas" alt="item">
+                            </a>
+                            {% if is_admin %}
+                                <img class="change-image editablelink" link-id="{{ site.name + '_box_programas_banner_17' }}" content="{{ read_link(site.name + '_box_programas_banner_17') }}" src="{{ site_base }}/{{ nocache_static }}/img/link.png" onmouseover="this.src='{{ site_base }}/{{ nocache_static }}/img/link.png';" onmouseout="this.src='{{ site_base }}/{{ nocache_static }}/img/link.png';">
+                            {% end %}
+                            <div class="texto-hu {{editabletext}}" text-id="{{ site.name + '_programas_banner_17' }}"> {{ read_text(site.name + '_programas_banner_17') }}</div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-6 banners-linea">
+                        <div style="position: relative;">
+                            {% if is_admin %}
+                                <div class="image-upload lapiz visible-movil">
+                                    <label for="img_box_programas_banner_18">
+                                        <img class="change-image" src="https://7static.loadingplay.com/static/images/ef03c01fe39c6b7d1404e311adfe47ff_btn-edit.png" onmouseover="this.src='https://7static.loadingplay.com/static/images/f2e626ad62e2c957b3708a27e55f4b03_btn-edit-hover.png';" onmouseout="this.src='https://7static.loadingplay.com/static/images/ef03c01fe39c6b7d1404e311adfe47ff_btn-edit.png'">
+                                    </label>
+                                    <input type="file" class="editableimage" image-id="{{ site.name }}_box_programas_banner_18" name="image" id="img_box_programas_banner_18">
+                                </div>
+                            {% end %}
+                            <a id="{{ site.name + '_box_programas_banner_18' }}" href="{{ read_link(site.name + '_box_programas_banner_18') }}">
+                                <img id="{{ site.name }}_box_programas_banner_18" src="{{ read_image(site.name + '_box_programas_banner_18', 1) }}" onload="this.onload='';this.src='{{ read_image(site.name + '_box_programas_banner_18',500) }}'" class="box-programas" alt="item">
+                            </a>
+                            {% if is_admin %}
+                                <img class="change-image editablelink" link-id="{{ site.name + '_box_programas_banner_18' }}" content="{{ read_link(site.name + '_box_programas_banner_18') }}" src="{{ site_base }}/{{ nocache_static }}/img/link.png" onmouseover="this.src='{{ site_base }}/{{ nocache_static }}/img/link.png';" onmouseout="this.src='{{ site_base }}/{{ nocache_static }}/img/link.png';">
+                            {% end %}
+                            <div class="texto-hu {{editabletext}}" text-id="{{ site.name + '_programas_banner_18' }}"> {{ read_text(site.name + '_programas_banner_18') }}</div>
                         </div>
                     </div>
                 </div>
@@ -312,5 +389,3 @@
 
     {% include '../home/footer.html' %}
 {% end %}
-
-
