@@ -27,12 +27,11 @@
 .texto-hu
 {
     position: absolute;
-    top: 130px;
+    bottom: 0%;
     text-align: center;
     width: 100%;
     color: white;
     overflow: hidden;
-    height: 40px;
     font-size: 25px;
 }
 
