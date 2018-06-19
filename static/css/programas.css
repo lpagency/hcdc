@@ -68,8 +68,14 @@
 
 @media (max-width: 414px)
 {
-    .box-programas
+    .banners-linea
     {
+        margin-bottom: 20px;
         height: 121px;
+    }
+
+    .texto-hu > p
+    {
+        font-size: 15px;
     }
 }
