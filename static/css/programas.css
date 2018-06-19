@@ -1,6 +1,14 @@
 .banners-linea
 {
     margin-bottom: 20px;
+    height: 300px;
+}
+
+.banners-container
+{
+    position: relative;
+    width: 100%;
+    height: 100%;
 }
 
 .programs-banner
@@ -19,28 +27,41 @@
 
 .box-programas
 {
-    width: 100%;
-    height: 300px;
     object-fit: cover;
+    width: 100%;
+    height: 100%;
 }
 
-.texto-hu
+.texto-hu, .texto-hu > p
 {
+    height: 100%;
+    width: 100%;
     position: absolute;
     bottom: 0%;
-    text-align: center;
-    width: 94%;
+    overflow: hidden;
+}
+
+.texto-hu > p
+{
+    height: auto;
     padding-left: 3%;
     padding-right: 3%;
+    margin: 0%;
+    text-align: center;
     color: white;
-    overflow: hidden;
     font-size: 25px;
 }
 
 @media (max-width: 991px)
 {
-    .box-programas
+    .banners-linea
     {
+        margin-bottom: 20px;
         height: auto;
+    }
+
+    .texto-hu > p
+    {
+        font-size: 15px;
     }
 }
