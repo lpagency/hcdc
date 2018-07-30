@@ -1,7 +1,7 @@
 /* global $ */
 'use strict';
 
-$(document).ready(function() 
+$(document).ready(function()
 {
     var base_url = $.environmentVar(
         'http://localhost:8520/',
@@ -11,11 +11,11 @@ $(document).ready(function()
         'http://localhost:8522/',
         'https://pay.loadingplay.com/',
         'https://pay.loadingplay.com');
-    var app_public = $.environmentVar(28,28,28);
+    var app_public = $.environmentVar('hcdc','hcdc','hcdc');
 
-    // functions 
+    // functions
     // productos relacionados
-    var related = function(tag) 
+    var related = function(tag)
     {
         var config = {
             'app_public': app_public,
